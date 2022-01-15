@@ -1,7 +1,7 @@
 (function ($) {
 
   $(document).ready(function() {
-      $('body').niceScroll();
+      $('.body').niceScroll();
   });
 
   $('.burger').on('click', function() {

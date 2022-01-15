@@ -7,12 +7,16 @@
     display: flex;
 
     width: 100%;
-    min-height: 50px;
+    min-height: 51px;
 
     background-color: rgba($color-dark, .3);
 
     justify-content: center;
     align-items: center;
+    @include sm
+    {
+        min-height: 50px;
+    }
 
     &__list
     {

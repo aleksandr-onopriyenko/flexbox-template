@@ -1,0 +1,16 @@
+@use 'presets' as *;
+
+.sidebar-left
+{
+    display: none;
+
+    @include md-min
+    {
+        display: flex;
+        flex-direction: column;
+
+        width: 220px;
+
+        gap: $gap-s;
+    }
+}

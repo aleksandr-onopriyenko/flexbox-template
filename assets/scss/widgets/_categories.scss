@@ -1,0 +1,41 @@
+@use 'presets' as *;
+
+.widgets-categories
+{
+    padding-bottom: 15px;
+
+
+    &__list
+    {
+        display: flex;
+        flex-direction: column;
+        // gap: 10px;
+
+        color: $color-light;
+
+        a
+        {
+            padding: 5px 0;
+
+            transition: color .5s, transform .5s, padding-left .5s;
+
+            color: inherit;
+            border-radius: 4px;
+
+            &:hover
+            {
+                padding-left: 10px;
+
+                color: $color-accent;
+                background-color: rgba($color-dark, .4);
+
+                @include text-shadow;
+            }
+
+            &:first-child
+            {
+                padding-top: 4px;
+            }
+        }
+    }
+}

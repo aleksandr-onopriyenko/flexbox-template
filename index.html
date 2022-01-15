@@ -13,34 +13,82 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="body">
 
-  <div class="wrapper">
-    <header class="header">
-      <div class="header-logo">
-        <div class="header-logo__img">
-          <img src="assets/img/logo.png" alt="logo image">
-        </div>
-        <div class="header-logo__title">
-          <div>flexbox template</div>
-          <span>Шаблон с применением flexbox для первого модуля, курса&nbspFront-end Web Development</span>
+  <div class="wrapper"></div>
+  <header class="header">
+    <div class="header-logo">
+      <div class="header-logo__img">
+        <img src="assets/img/logo.png" alt="logo image">
+      </div>
+      <div class="header-logo__title">
+        <div>flexbox template</div>
+        <span>Шаблон с применением flexbox для первого модуля, курса&nbspFront-end Web Development</span>
+      </div>
+    </div>
+    <nav class="header-menu">
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="header-menu__list ">
+        <a href="" class="header-menu__link active">Главная</a>
+        <a href="" class="header-menu__link">Страница</a>
+        <a href="" class="header-menu__link">Запись</a>
+        <a href="" class="header-menu__link">Контакты</a>
+        <a href="" class="header-menu__link">О нас</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar-left">
+      <div class="widgets widgets-search">
+        <h3 class="widgets__title">Поиск по сайту</h3>
+        <div class="widgets__content">
+          <form action="/" class="widgets-search__form" method="get">
+            <input autocomplete="off" class="widgets-search__input" type="search" name="search" id="search"
+              placeholder="Введите текст...">
+            <button type="submit" class="widgets-search__btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
         </div>
       </div>
-      <nav class="header-menu">
-        <div class="burger">
-          <span></span>
-          <span></span>
-          <span></span>
+      <div class="widgets widgets-categories">
+        <h3 class="widgets__title">Категории</h3>
+        <div class="widgets__content">
+          <nav class="widgets-categories__list">
+            <a href="#">HTML4 / HTML5</a>
+            <a href="#">CSS2 / CSS3</a>
+            <a href="#">Javascript / Jquery</a>
+            <a href="#">PHP / MySQL</a>
+            <a href="#">Less / Sass / Scss</a>
+            <a href="#">Wordpress</a>
+            <a href="#">Drupal</a>
+            <a href="#">Bootstrap</a>
+          </nav>
         </div>
-        <div class="header-menu__list ">
-          <a href="" class="header-menu__link active">Главная</a>
-          <a href="" class="header-menu__link">Страница</a>
-          <a href="" class="header-menu__link">Запись</a>
-          <a href="" class="header-menu__link">Контакты</a>
-          <a href="" class="header-menu__link">О нас</a>
+      </div>
+      <div class="widgets widgets-text">
+        <h3 class="widgets__title">О шаблоне</h3>
+        <div class="widgets__content">
+          <div class="widgets__content-text">
+            Шаблон разработан для изучения адаптивной верстки на HTML5, оформления с помощью CSS3, подключения готовых
+            библиотек и плагинов Jquery.
+          </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </aside>
+    <main class="main">
+      <nav class="main-breadcrumb"></nav>
+      <section class="main-content">
+        <h1></h1>
+        <div class="main-content-item"></div>
+      </section>
+    </main>
+    <aside class="sidebar-right"></aside>
   </div>
 
   <script src="libs/jquery/dist/jquery.min.js"></script>
