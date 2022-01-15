@@ -1,5 +1,5 @@
-$font-main: "Roboto", sans-serif;
-$font-header: "Lora", serif;
+$font-main: 'Roboto', sans-serif;
+$font-header: 'Lora', serif;
 $font-size: 14px;
 
 $xl: 1380px;
@@ -10,6 +10,7 @@ $xs: 576px;
 $xx: 480px;
 
 $gap: 30px;
+$gap-s: calc($gap / 2);
 
 $left-sidebar-width: 220px;
 $right-sidebar-width: 240px;

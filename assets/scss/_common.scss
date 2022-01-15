@@ -1,0 +1,103 @@
+@use 'presets' as *;
+
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+}
+html
+{
+    font-family: $font-main;
+    font-size: $font-size;
+    line-height: 1.5em;
+
+    color: $color-light;
+}
+
+.wrapper
+{
+    position: fixed;
+
+    width: 100%;
+    padding: 0 15px;
+
+    background-image: url(../img/global-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    inset: 0;
+}
+
+.burger
+{
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    display: none;
+
+    width: 50px;
+    height: 50px;
+
+    transform: translateX(-50%);
+
+    background-color: rgba($color-dark, .25);
+
+    @include sm
+    {
+        display: block;
+    }
+    span
+    {
+        position: absolute;
+        top: 48%;
+        left: 10px;
+
+        display: block;
+
+        width: 30px;
+        height: 2px;
+
+        transition: .5s;
+        transform: rotate(0deg);
+
+        background: $color-light;
+    }
+    span:first-child
+    {
+        top: 18px;
+    }
+    span:last-child
+    {
+        top: 30px;
+    }
+    &:hover
+    {
+        cursor: pointer;
+    }
+    &.burger--active
+    {
+        span
+        {
+            top: 48%;
+
+            transform: translateY(-50%);
+
+            opacity: 0;
+        }
+        span:first-child
+        {
+            transform: rotate(-135deg);
+
+            opacity: 1;
+        }
+        span:last-child
+        {
+            transform: rotate(-225deg);
+
+            opacity: 1;
+        }
+    }
+}

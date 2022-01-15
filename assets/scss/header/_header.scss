@@ -1,0 +1,23 @@
+@use '../presets' as *;
+
+.header
+{
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 45px 0 0;
+
+    border-bottom-right-radius: .5em;
+    border-bottom-left-radius: .5em;
+    background-color: rgba($color-dark, .5);
+
+    justify-content: center;
+    @include sm
+    {
+        padding: 15px 0 0;
+    }
+}

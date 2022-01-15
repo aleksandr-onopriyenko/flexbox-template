@@ -1,26 +1,23 @@
-@import "../../libs/normalize-scss/sass/normalize/import-now";
+@use '../../libs/normalize-scss/fork-versions/default/normalize';
 
-@import "variables";
-@import "skin";
-@import "mixins-media";
-@import "mixins";
+@use 'presets' as *;
 
-@import "common";
+@use 'common';
 
-@import "header/header";
-@import "header/header-logo";
-@import "header/header-menu";
+@use 'header/header';
+@use 'header/header-logo';
+@use 'header/header-menu';
 
-@import "main/main";
-@import "main/main-breadcrumb";
-@import "main/main-content";
-@import "main/main-content-item";
+@use 'main/main';
+@use 'main/main-breadcrumb';
+@use 'main/main-content';
+@use 'main/main-content-item';
 
-@import "aside/left";
-@import "aside/right";
+@use 'aside/left';
+@use 'aside/right';
 
-@import "widgets/widgets";
-@import "widgets/search";
-@import "widgets/categories";
-@import "widgets/news";
-@import "footer";
+@use 'widgets/widgets';
+@use 'widgets/search';
+@use 'widgets/categories';
+@use 'widgets/news';
+@use 'footer';

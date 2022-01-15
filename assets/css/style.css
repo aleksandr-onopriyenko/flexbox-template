@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
    ========================================================================== */
@@ -88,7 +87,9 @@ main {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-pre {
+code,
+kbd,
+samp, pre {
   font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
@@ -138,19 +139,6 @@ strong {
 b,
 strong {
   font-weight: bolder;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
 }
 
 /**
@@ -230,6 +218,34 @@ svg:not(:root) {
 /* Forms
    ========================================================================== */
 /**
+ * Known issues:
+ * - `select`:
+ *   By default, Chrome on OS X and Safari on OS X allow very limited styling of
+ *   select, unless a border property is set. The default font weight on
+ *   optgroup elements cannot safely be changed in Chrome on OSX and Safari on
+ *   OS X.
+ * - `[type="checkbox"]`:
+ *   It is recommended that you do not style checkbox and radio inputs as
+ *   Firefox's implementation does not respect box-sizing, padding, or width.
+ * - `[type="number"]`:
+ *   Certain font size values applied to number inputs cause the cursor style of
+ *   the decrement button to change from `default` to `text`.
+ * - `[type="search"]`:
+ *   The search input is not fully stylable by default. In Chrome and Safari on
+ *   OSX/iOS you can't control `font`, `padding`, `border`, or `background`. In
+ *   Chrome and Safari on Windows you can't control `border` properly. It will
+ *   apply `border-width` but will only show a border color (which cannot be
+ *   controlled) for the outer 1px of that border. Applying
+ *   `-webkit-appearance: textfield` addresses these issues without removing the
+ *   benefits of search inputs (e.g. showing past searches). Safari (but not
+ *   Chrome) will clip the cancel button on when it has padding (and `textfield`
+ *   appearance).
+ * - `::placeholder`:
+ *   In Edge, placeholders will disappear on `relative` or `absolute` positioned
+ *   `<input>` elements if you use `opacity` less than `1` due to a
+ *   [bug](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/3901363/).
+ */
+/**
  * 1. Change the font styles in all browsers (opinionated).
  * 2. Remove the margin in Firefox and Safari.
  */
@@ -238,11 +254,11 @@ input,
 optgroup,
 select,
 textarea {
+  line-height: 1.15;
+  /* 1 */
   font-family: sans-serif;
   /* 1 */
   font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
   /* 1 */
   margin: 0;
   /* 2 */
@@ -460,165 +476,259 @@ template {
 /* sm */
 /* xs */
 /* xx */
-.widget {
-  margin: 0 0 15px;
-  padding: 15px;
-  color: #eeeeee;
-  border-radius: 7px;
-  background: rgba(0, 0, 0, 0.5);
-}
-.widget h3 {
-  margin-top: 5px;
-  padding-bottom: 10px;
-  letter-spacing: 1.5px;
-  border-bottom: 1px solid #333333;
-  font-family: "Lora", serif;
-  font-weight: 300;
-}
-.widget p {
-  line-height: 2em;
-}
-.widget p:last-child {
-  margin-bottom: 0;
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.widget-search form {
-  position: relative;
-  margin: 15px 0 7px;
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #eee;
 }
-.widget-search__input {
+
+.wrapper {
+  position: fixed;
   width: 100%;
-  padding: 7px 8px 7px 40px;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-  color: #cccccc;
-  border: 1px solid rgba(238, 238, 238, 0.15);
-  border-radius: 4px;
-  font-size: 0.85rem;
-  background: rgba(238, 238, 238, 0.1);
+  padding: 0 15px;
+  background-image: url(../img/global-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  inset: 0;
 }
-.widget-search__input:focus {
-  color: #eeeeee;
-  border: 1px solid rgba(238, 238, 238, 0.3);
-  outline: none;
-  background: rgba(238, 238, 238, 0.2);
-}
-.widget-search__input::-webkit-input-placeholder {
-  color: #cccccc;
-}
-.widget-search__input::-moz-placeholder {
-  color: #cccccc;
-}
-.widget-search__input:-ms-input-placeholder {
-  color: #cccccc;
-}
-.widget-search__input::-ms-input-placeholder {
-  color: #cccccc;
-}
-.widget-search__input::placeholder {
-  color: #cccccc;
-}
-.widget-search__submit {
+
+.burger {
   position: absolute;
-  top: 1px;
-  bottom: 1px;
-  left: 1px;
-  padding: 5px 7px;
-  cursor: pointer;
-  color: #eeeeee;
-  border: none;
-  border-right: 1px solid rgba(238, 238, 238, 0.1);
-  background-color: transparent;
+  top: 0;
+  left: 50%;
+  display: none;
+  width: 50px;
+  height: 50px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.25);
 }
-.widget-search__submit:focus {
-  outline: none;
-}
-
-.widget-categories__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.widget-categories__item a {
+.burger span {
+  position: absolute;
+  top: 48%;
+  left: 10px;
   display: block;
-  padding: 5px 0;
-  -webkit-transition: padding-left 0.5s;
-  -o-transition: padding-left 0.5s;
-  transition: padding-left 0.5s;
-  border-radius: 4px;
+  width: 30px;
+  height: 2px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  background: #eee;
 }
-.widget-categories__item a:hover {
-  padding-left: 10px;
-  color: #e12727;
-  background: rgba(0, 0, 0, 0.5);
-  text-shadow: 1px 1px 3px #000000, 1px 1px 10px #000000;
+.burger span:first-child {
+  top: 18px;
+}
+.burger span:last-child {
+  top: 30px;
+}
+.burger:hover {
+  cursor: pointer;
+}
+.burger.burger--active span {
+  top: 48%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+}
+.burger.burger--active span:first-child {
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  opacity: 1;
+}
+.burger.burger--active span:last-child {
+  -webkit-transform: rotate(-225deg);
+      -ms-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+  opacity: 1;
 }
 
-.widget-news__item-wrapper {
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 -15px 7.5px;
-  /* компенсация padding для фонового ховера */
-  padding: 0 15px 7.5px;
-  /* для фонового ховера от краев блока */
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-.widget-news__item-title {
-  margin: 0 0 10px;
-  -webkit-transition: color 0.5s;
-  -o-transition: color 0.5s;
-  transition: color 0.5s;
-  letter-spacing: 1px;
-  font-weight: 300;
-  display: block;
   overflow: hidden;
-  width: 100%;
-  white-space: nowrap;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-}
-.widget-news__item-image {
-  overflow: hidden;
-  width: 75px;
-  height: 75px;
-  border-radius: 4px;
-}
-.widget-news__item-image img {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  -o-transition: transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-}
-.widget-news__item-excerpt {
-  width: calc(100% - 75px);
-  padding-left: 10px;
-  -webkit-transition: color 0.5s;
-  -o-transition: color 0.5s;
-  transition: color 0.5s;
-  color: #cccccc;
-  display: -webkit-box;
-  overflow: hidden;
-  max-height: 75px;
-  font-size: 13px;
-  line-height: 19px;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 45px 0 0;
+  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.widget-news__item a:hover h4 {
-  text-shadow: 1px 1px 3px #000000, 1px 1px 10px #000000;
+
+.header-logo {
+  padding: 0 15px;
 }
-.widget-news__item a:hover img {
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
+.header-logo__img {
+  width: 400px;
+  height: 132px;
+  margin: 0 auto 30px;
 }
-.widget-news__item a:hover .widget-news__item-excerpt {
-  color: #eeeeee;
+.header-logo__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.widget-news__item a:hover .widget-news__item-wrapper {
-  background: -o-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+.header-logo__title {
+  text-align: center;
+}
+.header-logo__title div {
+  font-family: "Lora", serif;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 3.5rem;
+  margin-bottom: 15px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.header-logo__title span {
+  font-weight: 700;
+  line-height: 1.5em;
+  display: block;
+  letter-spacing: 0.2em;
+}
+
+.header-menu {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header-menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.header-menu__link {
+  padding: 10px 15px;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  -o-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 0.35em;
+}
+.header-menu__link.active {
+  color: #bb1a1a;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 3px #000, 1px 1px 10px #000;
+}
+.header-menu__link:hover {
+  color: #e12727;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 3px #000, 1px 1px 10px #000;
+}
+@media (min-width: 768px) {
+  .header-logo {
+    margin-bottom: 45px;
+  }
+}
+@media (max-width: 767.8px) {
+  .burger {
+    display: block;
+  }
+  .header {
+    padding: 15px 0 0;
+  }
+  .header-logo {
+    margin-bottom: 15px;
+  }
+  .header-logo__title span {
+    font-size: 12.25px;
+    font-weight: 400;
+    line-height: 1.25em;
+    letter-spacing: 0.1em;
+  }
+  .header-menu__list {
+    display: none;
+  }
+  .header-menu__list--active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 50px 5px 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 0;
+  }
+  .header-menu__link {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .header-menu__link:last-child {
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 767.8px) and (min-width: 480px) {
+  .header-logo__img {
+    max-width: 300px;
+    height: 99px;
+    margin: 0 auto 15px;
+  }
+}
+@media (max-width: 767.8px) and (min-width: 576px) {
+  .header-logo__title div {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+@media (max-width: 575.8px) {
+  .header-logo__title div {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media (max-width: 479.8px) {
+  .header-logo__img {
+    max-width: 80%;
+    height: 89.8px;
+    margin: 0 auto 15px;
+  }
 }
