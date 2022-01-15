@@ -1,0 +1,61 @@
+@use 'presets' as *;
+
+.main-breadcrumb
+{
+    display: flex;
+
+    width: 100%;
+    min-height: 37px;
+    margin-bottom: $gap;
+    padding: 0 10px;
+
+    border-radius: 7px;
+    background: linear-gradient(
+    90deg,
+    rgba($color-dark, 0) 0%,
+    rgba($color-dark, .8) 100%
+    );
+
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    &__item
+    {
+        font-weight: 700;
+
+        position: relative;
+
+        padding: 0 10px;
+
+        letter-spacing: .145em;
+
+        &:not(:last-child):hover
+        {
+            color: $color-accent;
+
+            @include text-shadow;
+        }
+
+        &:not(:last-child)::before
+        {
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 700;
+
+            position: absolute;
+            top: 49%;
+            right: -4.5px;
+
+            display: block;
+
+            content: '\f0da';
+            transform: translateY(-49%);
+
+            color: $color-gray;
+        }
+
+        &--current
+        {
+            font-weight: 300;
+        }
+    }
+}

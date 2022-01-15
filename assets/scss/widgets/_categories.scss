@@ -4,7 +4,6 @@
 {
     padding-bottom: 15px;
 
-
     &__list
     {
         display: flex;
@@ -30,11 +29,6 @@
                 background-color: rgba($color-dark, .4);
 
                 @include text-shadow;
-            }
-
-            &:first-child
-            {
-                padding-top: 4px;
             }
         }
     }
