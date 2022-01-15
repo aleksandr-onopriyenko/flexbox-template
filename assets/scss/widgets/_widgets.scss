@@ -9,6 +9,11 @@
     border-radius: 7px;
     background-color: rgba($color-dark, .5);
 
+    &-text
+    {
+        padding-bottom: 14px;
+    }
+
     &__title
     {
         font-family: $font-header;

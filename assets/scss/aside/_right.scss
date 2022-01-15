@@ -1,0 +1,16 @@
+@use 'presets' as *;
+
+.sidebar-right
+{
+    display: none;
+
+    @include lg-min
+    {
+        display: flex;
+        flex-direction: column;
+
+        width: 240px;
+
+        gap: $gap-s;
+    }
+}
