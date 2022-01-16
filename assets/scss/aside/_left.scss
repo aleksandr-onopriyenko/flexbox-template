@@ -2,16 +2,24 @@
 
 .sidebar-left
 {
-    display: none;
+    display: flex;
+    flex-direction: column;
 
+    gap: $gap-s;
+    order: 2;
     @include md-min
     {
-        display: flex;
-        flex-direction: column;
-
         max-width: 220px;
 
+        order: 1;
         flex-grow: 1;
-        gap: $gap-s;
+    }
+    @include md-xs
+    {
+        width: calc(50% - 7.5px);
+    }
+    @include xs
+    {
+        width: 100%;
     }
 }

@@ -2,15 +2,21 @@
 
 .sidebar-right
 {
-    display: none;
-
+    order: 3;
     @include lg-min
     {
-        display: flex;
-        flex-direction: column;
-
         width: 240px;
-
-        gap: $gap-s;
+    }
+    @include lg-md
+    {
+        width: 100%;
+    }
+    @include md-xs
+    {
+        width: calc(50% - 7.5px);
+    }
+    @include xs
+    {
+        width: 100%;
     }
 }

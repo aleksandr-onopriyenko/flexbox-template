@@ -2,22 +2,16 @@
 
 .widgets-news
 {
-    display: none;
-
-    @include lg-min
-    {
-        display: flex;
-        flex-direction: column;
-
-        padding-bottom: 15px;
-    }
-
+    padding-bottom: 22px;
     &__item
     {
-        margin-bottom: 7px;
+        display: block;
 
         transition: background .5s;
-
+        &:not(:last-child)
+        {
+            margin-bottom: 12px;
+        }
         &:hover
         {
             background: radial-gradient(
@@ -54,7 +48,7 @@
 
         transition: color .5s;
         white-space: nowrap;
-        letter-spacing: .07em;
+        letter-spacing: 1px;
         text-overflow: ellipsis;
     }
 
@@ -63,8 +57,6 @@
         display: flex;
 
         margin-bottom: 5px;
-
-        gap: 10px;
     }
 
     &__item-poster
@@ -90,17 +82,16 @@
     &__item-text
     {
         font-size: 13px;
-        font-weight: 300;
-        line-height: 1.47em;
+        line-height: 19px;
 
         display: -webkit-box;
         overflow: hidden;
 
-        max-width: 58%;
+        width: calc(100% - 75px);
         height: 78px;
+        padding: 0 0 0 10px;
 
         transition: color .5s;
-        letter-spacing: .005em;
         text-overflow: ellipsis;
 
         color: $color-gray;

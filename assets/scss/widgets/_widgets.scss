@@ -3,7 +3,7 @@
 .widgets
 {
     width: 100%;
-    height: auto;
+    height: fit-content;
     padding: 20px 15px 20px;
 
     border-radius: 7px;
@@ -40,6 +40,13 @@
             content: '';
 
             background-color: rgba($color-dark, .5);
+        }
+
+        &--line-sm
+        {
+            width: fit-content;
+            margin: 0 auto;
+            padding: 0 60px;
         }
     }
 

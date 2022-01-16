@@ -7,5 +7,5 @@
 // @import "normalize/import-now";
 // ```
 
-@use "../normalize";
+@import '../normalize';
 @include normalize();
