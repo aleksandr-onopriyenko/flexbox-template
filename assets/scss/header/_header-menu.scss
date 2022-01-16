@@ -1,82 +1,72 @@
-@use '../presets' as *;
+@use "../presets" as *;
 
-.header-menu
-{
-    position: relative;
+.header-menu {
+  position: relative;
 
+  display: flex;
+
+  width: 100%;
+  min-height: 51px;
+
+  background-color: rgba($color-dark, 0.3);
+
+  justify-content: center;
+  align-items: center;
+  @include sm {
+    min-height: 50px;
+  }
+
+  &__list {
     display: flex;
-
-    width: 100%;
-    min-height: 51px;
-
-    background-color: rgba($color-dark, .3);
 
     justify-content: center;
     align-items: center;
-    @include sm
-    {
-        min-height: 50px;
-    }
-
-    &__list
-    {
+    gap: 10px;
+    @include sm {
+      display: none;
+      &--active {
         display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        height: auto;
+        padding: 50px 5px 0;
 
         justify-content: center;
-        align-items: center;
-        gap: 10px;
-        @include sm
-        {
-            display: none;
-            &--active
-            {
-                display: flex;
-                flex-direction: column;
+        gap: 0;
+      }
+    }
+  }
 
-                width: 100%;
-                height: auto;
-                padding: 50px 5px 0;
+  &__link {
+    padding: 10px $gap-s;
 
-                justify-content: center;
-                gap: 0;
-            }
-        }
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+
+    color: inherit;
+    border-radius: 4px;
+
+    @include sm {
+      display: block;
+
+      width: 100%;
+
+      text-align: center;
+      &:last-child {
+        margin-bottom: 5px;
+      }
+    }
+    &.active {
+      color: $color-accent-dark;
+      background-color: rgba($color-dark, 0.4);
+      text-shadow: 1px 1px 3px #000, 1px 1px 10px #000;
     }
 
-    &__link
-    {
-        padding: 10px $gap-s;
-
-        transition: background-color .3s, color .3s;
-        text-decoration: none;
-
-        color: inherit;
-        border-radius: .35em;
-
-        @include sm
-        {
-            display: block;
-
-            width: 100%;
-
-            text-align: center;
-            &:last-child
-            {
-                margin-bottom: 5px;
-            }
-        }
-        &.active
-        {
-            color: $color-accent-dark;
-            background-color: rgba($color-dark, .4);
-            text-shadow: 1px 1px 3px #000, 1px 1px 10px #000;
-        }
-
-        &:hover
-        {
-            color: $color-accent;
-            background-color: rgba($color-dark, .3);
-            text-shadow: 1px 1px 3px #000, 1px 1px 10px #000;
-        }
+    &:hover {
+      color: $color-accent;
+      background-color: rgba($color-dark, 0.3);
+      text-shadow: 1px 1px 3px #000, 1px 1px 10px #000;
     }
+  }
 }

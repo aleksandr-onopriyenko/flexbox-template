@@ -1,145 +1,117 @@
-@use 'presets' as *;
+@use "presets" as *;
 
 *,
 *::before,
-*::after
-{
-    box-sizing: border-box;
+*::after {
+  box-sizing: border-box;
 }
-html
-{
-    font-family: $font-main;
-    font-size: $font-size;
-    font-weight: 400;
-    line-height: 1.5em;
+html {
+  font-family: $font-main;
+  font-size: $font-size;
+  font-weight: 400;
+  line-height: 1.5em;
 
-    color: $color-light;
+  color: $color-light;
 }
 
-body
-{
-    width: 100%;
-    height: 100%;
-    padding: 0 15px;
-
-    @include lg-min
-    {
-        padding: 0 30px;
-    }
+body {
+  width: 100%;
+  height: 100%;
 }
 
-a
-{
-    text-decoration: none;
+a {
+  text-decoration: none;
 
-    color: inherit;
+  color: inherit;
 }
 
-.wrapper
-{
-    position: fixed;
-    z-index: -1;
+.wrapper {
+  width: 100%;
+  padding: 0 15px $gap;
 
-    width: 100%;
-    padding: 0 15px $gap;
-
-    background-color: $color-warning;
-    background-image: url(../img/global-bg.jpg);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-
-    inset: 0;
+  background-color: $color-warning;
+  background-image: url(../img/global-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.burger
-{
+.burger {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  display: none;
+
+  width: 50px;
+  height: 50px;
+
+  transform: translateX(-50%);
+
+  background-color: rgba($color-dark, 0.25);
+
+  @include sm {
+    display: block;
+  }
+  span {
     position: absolute;
-    top: 0;
-    left: 50%;
+    top: 48%;
+    left: 10px;
 
-    display: none;
+    display: block;
 
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 2px;
 
-    transform: translateX(-50%);
+    transition: 0.5s;
+    transform: rotate(0deg);
 
-    background-color: rgba($color-dark, .25);
+    background: $color-light;
+  }
+  span:first-child {
+    top: 18px;
+  }
+  span:last-child {
+    top: 30px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &.burger--active {
+    span {
+      top: 48%;
 
-    @include sm
-    {
-        display: block;
+      transform: translateY(-50%);
+
+      opacity: 0;
     }
-    span
-    {
-        position: absolute;
-        top: 48%;
-        left: 10px;
+    span:first-child {
+      transform: rotate(-135deg);
 
-        display: block;
-
-        width: 30px;
-        height: 2px;
-
-        transition: .5s;
-        transform: rotate(0deg);
-
-        background: $color-light;
+      opacity: 1;
     }
-    span:first-child
-    {
-        top: 18px;
-    }
-    span:last-child
-    {
-        top: 30px;
-    }
-    &:hover
-    {
-        cursor: pointer;
-    }
-    &.burger--active
-    {
-        span
-        {
-            top: 48%;
+    span:last-child {
+      transform: rotate(-225deg);
 
-            transform: translateY(-50%);
-
-            opacity: 0;
-        }
-        span:first-child
-        {
-            transform: rotate(-135deg);
-
-            opacity: 1;
-        }
-        span:last-child
-        {
-            transform: rotate(-225deg);
-
-            opacity: 1;
-        }
+      opacity: 1;
     }
+  }
 }
 
-.container
-{
-    display: flex;
+.container {
+  display: flex;
 
-    width: 100%;
-    max-width: 1320px;
-    max-height: 100%;
-    margin: 0 auto $gap-s;
+  width: 100%;
+  max-width: 1320px;
+  max-height: 100%;
+  margin: 0 auto $gap-s;
 
-    gap: $gap;
-    @include lg
-    {
-        flex-wrap: wrap;
-    }
-    @include md
-    {
-        gap: $gap-s;
-    }
+  gap: $gap;
+  @include lg {
+    flex-wrap: wrap;
+  }
+  @include md {
+    gap: $gap-s;
+  }
 }

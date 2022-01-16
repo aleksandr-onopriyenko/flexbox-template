@@ -1,53 +1,44 @@
-@use 'presets' as *;
+@use "presets" as *;
 
-.footer
-{
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 1320px;
+  margin: -1px auto;
+
+  gap: 15px;
+
+  &__top {
     display: flex;
-    flex-direction: column;
 
-    max-width: 1320px;
-    margin: -1px auto $gap;
+    width: 100%;
 
     gap: 15px;
+    @include md {
+      flex-wrap: wrap;
+    }
+    &-item {
+      width: 25%;
 
-    &__top
-    {
-        display: flex;
-
+      @include md-xs {
+        width: calc(50% - 7.5px);
+      }
+      @include xs {
         width: 100%;
-
-        gap: 15px;
-        @include md
-        {
-            flex-wrap: wrap;
-        }
-        &-item
-        {
-            width: 25%;
-
-            @include md-xs
-            {
-                width: calc(50% - 7.5px);
-            }
-            @include xs
-            {
-                width: 100%;
-            }
-        }
+      }
     }
+  }
 
-    &__bottom
-    {
-        text-align: center;
+  &__bottom {
+    text-align: center;
 
-        .widgets
-        {
-            padding: 15px;
+    .widgets {
+      padding: 15px;
 
-            &__title
-            {
-                margin-bottom: 25px;
-            }
-        }
+      &__title {
+        margin-bottom: 25px;
+      }
     }
+  }
 }

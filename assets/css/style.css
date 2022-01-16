@@ -494,7 +494,6 @@ html {
 body {
   width: 100%;
   height: 100%;
-  padding: 0 15px;
 }
 
 a {
@@ -503,8 +502,6 @@ a {
 }
 
 .wrapper {
-  position: fixed;
-  z-index: -1;
   width: 100%;
   padding: 0 15px 30px;
   background-color: #d8b036;
@@ -512,7 +509,7 @@ a {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-  inset: 0;
+  background-attachment: fixed;
 }
 
 .burger {
@@ -671,7 +668,7 @@ a {
   transition: background-color 0.3s, color 0.3s;
   text-decoration: none;
   color: inherit;
-  border-radius: 0.35em;
+  border-radius: 4px;
 }
 .header-menu__link.active {
   color: #bb1a1a;
@@ -1078,7 +1075,7 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 1320px;
-  margin: -1px auto 30px;
+  margin: -1px auto;
   gap: 15px;
 }
 .footer__top {
@@ -1117,9 +1114,6 @@ a {
   }
 }
 @media (min-width: 1200px) {
-  body {
-    padding: 0 30px;
-  }
   .main {
     max-width: calc(100% - 520px);
   }

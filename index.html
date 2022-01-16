@@ -7,295 +7,313 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FLEXBOX TEMPLATE</title>
   <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="libs/@fortawesome/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body class="body">
-  <div class="wrapper"></div>
-
-  <header class="header">
-    <div class="header-logo">
-      <div class="header-logo__img">
-        <img src="assets/img/logo.png" alt="logo image">
-      </div>
-      <div class="header-logo__title">
-        <div>flexbox template</div>
-        <span>Шаблон с применением flexbox для первого модуля, курса Front-end Web Development</span>
-      </div>
-    </div>
-    <nav class="header-menu">
-      <div class="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="header-menu__list ">
-        <a href="#" class="header-menu__link active">Главная</a>
-        <a href="#" class="header-menu__link">Страница</a>
-        <a href="#" class="header-menu__link">Запись</a>
-        <a href="#" class="header-menu__link">Контакты</a>
-        <a href="#" class="header-menu__link">О нас</a>
-      </div>
-    </nav>
-  </header>
-
-  <div class="container">
-    <aside class="sidebar-left">
-      <div class="widgets widgets-search">
-        <h3 class="widgets__title">Поиск по сайту</h3>
-        <div class="widgets__content">
-          <form action="/" class="widgets-search__form" method="get">
-            <input autocomplete="off" class="widgets-search__input" type="search" name="search" id="search"
-              placeholder="Введите текст...">
-            <button type="submit" class="widgets-search__btn">
-              <i class="fas fa-search"></i>
-            </button>
-          </form>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header-logo">
+        <div class="header-logo__img">
+          <img src="assets/img/logo.png" alt="logo image">
+        </div>
+        <div class="header-logo__title">
+          <div>flexbox template</div>
+          <span>Шаблон с применением flexbox для первого модуля, курса Front-end Web Development</span>
         </div>
       </div>
-      <div class="widgets widgets-categories">
-        <h3 class="widgets__title">Категории</h3>
-        <div class="widgets__content">
-          <nav class="widgets-categories__list">
-            <a href="#">HTML4 / HTML5</a>
-            <a href="#">CSS2 / CSS3</a>
-            <a href="#">Javascript / Jquery</a>
-            <a href="#">PHP / MySQL</a>
-            <a href="#">Less / Sass / Scss</a>
-            <a href="#">Wordpress</a>
-            <a href="#">Drupal</a>
-            <a href="#">Bootstrap</a>
-          </nav>
+      <nav class="header-menu">
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-      </div>
-      <div class="widgets widgets-text">
-        <h3 class="widgets__title">О шаблоне</h3>
-        <div class="widgets__content">
-          <div class="widgets__content-text">
-            Шаблон разработан для изучения адаптивной верстки на HTML5, оформления с помощью CSS3, подключения готовых
-            библиотек и плагинов Jquery.
-          </div>
+        <div class="header-menu__list ">
+          <a href="#" class="header-menu__link active">Главная</a>
+          <a href="#" class="header-menu__link">Страница</a>
+          <a href="#" class="header-menu__link">Запись</a>
+          <a href="#" class="header-menu__link">Контакты</a>
+          <a href="#" class="header-menu__link">О нас</a>
         </div>
-      </div>
-    </aside>
-    <main class="main">
-      <nav class="main-breadcrumb">
-        <a href="#" class="main-breadcrumb__item">Главная</a>
-        <a href="#" class="main-breadcrumb__item">Раздел</a>
-        <span class="main-breadcrumb__item main-breadcrumb__item--current">Страница</span>
       </nav>
-      <h1 class="main__title">Lorem ipsum dolor sit amet, consectetur</h1>
-      <section class="main-content">
-        <a href="#" class="main-content-item">
-          <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
-          <img src="assets/img/samples/1.jpg" alt="article picture" class="main-content-item__img">
-          <div class="main-content-item__description main-content-item__description--active">Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Id architecto maiores.</div>
-        </a>
-        <a href="#" class="main-content-item">
-          <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
-          <img src="assets/img/samples/2.jpg" alt="article picture" class="main-content-item__img">
-          <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
-            architecto maiores.</div>
-        </a>
-        <a href="#" class="main-content-item">
-          <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
-          <img src="assets/img/samples/3.jpg" alt="article picture" class="main-content-item__img">
-          <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
-            architecto maiores.</div>
-        </a>
-        <a href="#" class="main-content-item">
-          <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
-          <img src="assets/img/samples/4.jpg" alt="article picture" class="main-content-item__img">
-          <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
-            architecto maiores.</div>
-        </a>
-        <a href="#" class="main-content-item">
-          <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
-          <img src="assets/img/samples/5.jpg" alt="article picture" class="main-content-item__img">
-          <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
-            architecto maiores.</div>
-        </a>
-        <a href="#" class="main-content-item">
-          <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
-          <img src="assets/img/samples/6.jpg" alt="article picture" class="main-content-item__img">
-          <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
-            architecto maiores.</div>
-        </a>
-        <a href="#" class="main-content-item">
-          <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
-          <img src="assets/img/samples/7.jpg" alt="article picture" class="main-content-item__img">
-          <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
-            architecto maiores.</div>
-        </a>
-        <a href="#" class="main-content-item">
-          <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
-          <img src="assets/img/samples/8.jpg" alt="article picture" class="main-content-item__img">
-          <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
-            architecto maiores.</div>
-        </a>
-        <a href="#" class="main-content-item">
-          <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
-          <img src="assets/img/samples/9.jpg" alt="article picture" class="main-content-item__img">
-          <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
-            architecto maiores.</div>
-        </a>
-        <a href="#" class="main-content-item">
-          <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
-          <img src="assets/img/samples/10.jpg" alt="article picture" class="main-content-item__img">
-          <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
-            architecto maiores.</div>
-        </a>
-        <a href="#" class="main-content-item">
-          <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
-          <img src="assets/img/samples/11.jpg" alt="article picture" class="main-content-item__img">
-          <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
-            architecto maiores.</div>
-        </a>
-        <a href="#" class="main-content-item">
-          <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
-          <img src="assets/img/samples/12.jpg" alt="article picture" class="main-content-item__img">
-          <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
-            architecto maiores.</div>
-        </a>
-      </section>
-    </main>
-    <aside class="sidebar-right">
-      <div class="widgets widgets-news">
-        <h3 class="widgets__title">Новые статьи</h3>
-        <a href="#" class="widgets-news__item">
-          <h4 class="widgets-news__item-title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-          <div class="widgets-news__description">
-            <div class="widgets-news__item-poster">
-              <img src="assets/img/samples/100x100___1.jpg" alt="poster image">
-            </div>
-            <div class="widgets-news__item-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, omnis quam! Aliquid architecto asperiores
-              atque blanditiis error, ipsum magni maxime molestias, mollitia neque odit quam quia reiciendis sed velit
-              veritatis.</div>
-          </div>
-        </a>
+    </header>
 
-        <a href="#" class="widgets-news__item">
-          <h4 class="widgets-news__item-title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-          <div class="widgets-news__description">
-            <div class="widgets-news__item-poster">
-              <img src="assets/img/samples/100x100___2.jpg" alt="poster image">
-            </div>
-            <div class="widgets-news__item-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci autem commodi dolore ea, eaque enim
-              ex fugiat ipsum laudantium magni modi neque numquam omnis perspiciatis soluta tempora totam voluptatum!
+    <div class="container">
+      <aside class="sidebar-left">
+        <div class="widgets widgets-search">
+          <h3 class="widgets__title">Поиск по сайту</h3>
+          <div class="widgets__content">
+            <form action="/" class="widgets-search__form" method="get">
+              <input autocomplete="off" class="widgets-search__input" type="search" name="search" id="search"
+                placeholder="Введите текст...">
+              <button type="submit" class="widgets-search__btn">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="widgets widgets-categories">
+          <h3 class="widgets__title">Категории</h3>
+          <div class="widgets__content">
+            <nav class="widgets-categories__list">
+              <a href="#">HTML4 / HTML5</a>
+              <a href="#">CSS2 / CSS3</a>
+              <a href="#">Javascript / Jquery</a>
+              <a href="#">PHP / MySQL</a>
+              <a href="#">Less / Sass / Scss</a>
+              <a href="#">Wordpress</a>
+              <a href="#">Drupal</a>
+              <a href="#">Bootstrap</a>
+            </nav>
+          </div>
+        </div>
+        <div class="widgets widgets-text">
+          <h3 class="widgets__title">О шаблоне</h3>
+          <div class="widgets__content">
+            <div class="widgets__content-text">
+              Шаблон разработан для изучения адаптивной верстки на HTML5, оформления с помощью CSS3, подключения
+              готовых
+              библиотек и плагинов Jquery.
             </div>
           </div>
-        </a>
+        </div>
+      </aside>
+      <main class="main">
+        <nav class="main-breadcrumb">
+          <a href="#" class="main-breadcrumb__item">Главная</a>
+          <a href="#" class="main-breadcrumb__item">Раздел</a>
+          <span class="main-breadcrumb__item main-breadcrumb__item--current">Страница</span>
+        </nav>
+        <h1 class="main__title">Lorem ipsum dolor sit amet, consectetur</h1>
+        <section class="main-content">
+          <a href="#" class="main-content-item">
+            <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+            <img src="assets/img/samples/1.jpg" alt="article picture" class="main-content-item__img">
+            <div class="main-content-item__description main-content-item__description--active">Lorem ipsum dolor sit
+              amet,
+              consectetur adipisicing elit. Id architecto maiores.</div>
+          </a>
+          <a href="#" class="main-content-item">
+            <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+            <img src="assets/img/samples/2.jpg" alt="article picture" class="main-content-item__img">
+            <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
+              architecto maiores.</div>
+          </a>
+          <a href="#" class="main-content-item">
+            <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+            <img src="assets/img/samples/3.jpg" alt="article picture" class="main-content-item__img">
+            <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
+              architecto maiores.</div>
+          </a>
+          <a href="#" class="main-content-item">
+            <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+            <img src="assets/img/samples/4.jpg" alt="article picture" class="main-content-item__img">
+            <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
+              architecto maiores.</div>
+          </a>
+          <a href="#" class="main-content-item">
+            <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+            <img src="assets/img/samples/5.jpg" alt="article picture" class="main-content-item__img">
+            <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
+              architecto maiores.</div>
+          </a>
+          <a href="#" class="main-content-item">
+            <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+            <img src="assets/img/samples/6.jpg" alt="article picture" class="main-content-item__img">
+            <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
+              architecto maiores.</div>
+          </a>
+          <a href="#" class="main-content-item">
+            <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+            <img src="assets/img/samples/7.jpg" alt="article picture" class="main-content-item__img">
+            <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
+              architecto maiores.</div>
+          </a>
+          <a href="#" class="main-content-item">
+            <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+            <img src="assets/img/samples/8.jpg" alt="article picture" class="main-content-item__img">
+            <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
+              architecto maiores.</div>
+          </a>
+          <a href="#" class="main-content-item">
+            <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+            <img src="assets/img/samples/9.jpg" alt="article picture" class="main-content-item__img">
+            <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
+              architecto maiores.</div>
+          </a>
+          <a href="#" class="main-content-item">
+            <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+            <img src="assets/img/samples/10.jpg" alt="article picture" class="main-content-item__img">
+            <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
+              architecto maiores.</div>
+          </a>
+          <a href="#" class="main-content-item">
+            <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+            <img src="assets/img/samples/11.jpg" alt="article picture" class="main-content-item__img">
+            <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
+              architecto maiores.</div>
+          </a>
+          <a href="#" class="main-content-item">
+            <h2 class="main-content-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+            <img src="assets/img/samples/12.jpg" alt="article picture" class="main-content-item__img">
+            <div class="main-content-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
+              architecto maiores.</div>
+          </a>
+        </section>
+      </main>
+      <aside class="sidebar-right">
+        <div class="widgets widgets-news">
+          <h3 class="widgets__title">Новые статьи</h3>
+          <a href="#" class="widgets-news__item">
+            <h4 class="widgets-news__item-title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+            <div class="widgets-news__description">
+              <div class="widgets-news__item-poster">
+                <img src="assets/img/samples/100x100___1.jpg" alt="poster image">
+              </div>
+              <div class="widgets-news__item-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, omnis quam! Aliquid architecto
+                asperiores
+                atque blanditiis error, ipsum magni maxime molestias, mollitia neque odit quam quia reiciendis sed
+                velit
+                veritatis.</div>
+            </div>
+          </a>
 
-        <a href="#" class="widgets-news__item">
-          <h4 class="widgets-news__item-title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-          <div class="widgets-news__description">
-            <div class="widgets-news__item-poster">
-              <img src="assets/img/samples/100x100___3.jpg" alt="poster image">
+          <a href="#" class="widgets-news__item">
+            <h4 class="widgets-news__item-title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+            <div class="widgets-news__description">
+              <div class="widgets-news__item-poster">
+                <img src="assets/img/samples/100x100___2.jpg" alt="poster image">
+              </div>
+              <div class="widgets-news__item-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci autem commodi dolore ea, eaque
+                enim
+                ex fugiat ipsum laudantium magni modi neque numquam omnis perspiciatis soluta tempora totam
+                voluptatum!
+              </div>
             </div>
-            <div class="widgets-news__item-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci distinctio dolorum facilis ipsa vel.
-              Alias animi beatae cum ea eligendi laboriosam minus modi neque, possimus quos reiciendis totam veniam
-              voluptatum.</div>
-          </div>
-        </a>
+          </a>
 
-        <a href="#" class="widgets-news__item">
-          <h4 class="widgets-news__item-title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-          <div class="widgets-news__description">
-            <div class="widgets-news__item-poster">
-              <img src="assets/img/samples/100x100___4.jpg" alt="poster image">
+          <a href="#" class="widgets-news__item">
+            <h4 class="widgets-news__item-title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+            <div class="widgets-news__description">
+              <div class="widgets-news__item-poster">
+                <img src="assets/img/samples/100x100___3.jpg" alt="poster image">
+              </div>
+              <div class="widgets-news__item-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci distinctio dolorum facilis ipsa
+                vel.
+                Alias animi beatae cum ea eligendi laboriosam minus modi neque, possimus quos reiciendis totam veniam
+                voluptatum.</div>
             </div>
-            <div class="widgets-news__item-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, autem consequatur ex illo inventore iusto
-              modi molestias nesciunt nisi non obcaecati perferendis qui quod quos, recusandae rerum, sequi totam!
-              Dolorum?</div>
-          </div>
-        </a>
+          </a>
 
-        <a href="#" class="widgets-news__item">
-          <h4 class="widgets-news__item-title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-          <div class="widgets-news__description">
-            <div class="widgets-news__item-poster">
-              <img src="assets/img/samples/100x100___5.jpg" alt="poster image">
+          <a href="#" class="widgets-news__item">
+            <h4 class="widgets-news__item-title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+            <div class="widgets-news__description">
+              <div class="widgets-news__item-poster">
+                <img src="assets/img/samples/100x100___4.jpg" alt="poster image">
+              </div>
+              <div class="widgets-news__item-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, autem consequatur ex illo inventore
+                iusto
+                modi molestias nesciunt nisi non obcaecati perferendis qui quod quos, recusandae rerum, sequi totam!
+                Dolorum?</div>
             </div>
-            <div class="widgets-news__item-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur, dolores eaque eius explicabo
-              facere id illo impedit, labore laboriosam magni optio placeat porro provident quaerat sequi sit? Nostrum,
-              porro?</div>
-          </div>
-        </a>
+          </a>
 
-        <a href="#" class="widgets-news__item">
-          <h4 class="widgets-news__item-title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-          <div class="widgets-news__description">
-            <div class="widgets-news__item-poster">
-              <img src="assets/img/samples/100x100___6.jpg" alt="poster image">
+          <a href="#" class="widgets-news__item">
+            <h4 class="widgets-news__item-title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+            <div class="widgets-news__description">
+              <div class="widgets-news__item-poster">
+                <img src="assets/img/samples/100x100___5.jpg" alt="poster image">
+              </div>
+              <div class="widgets-news__item-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur, dolores eaque eius
+                explicabo
+                facere id illo impedit, labore laboriosam magni optio placeat porro provident quaerat sequi sit?
+                Nostrum,
+                porro?</div>
             </div>
-            <div class="widgets-news__item-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur blanditiis consequatur consequuntur
-              debitis deleniti doloremque earum est explicabo molestias nostrum, quam ratione rem rerum sapiente,
-              veniam. Eligendi hic sed sint!</div>
+          </a>
+
+          <a href="#" class="widgets-news__item">
+            <h4 class="widgets-news__item-title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+            <div class="widgets-news__description">
+              <div class="widgets-news__item-poster">
+                <img src="assets/img/samples/100x100___6.jpg" alt="poster image">
+              </div>
+              <div class="widgets-news__item-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur blanditiis consequatur
+                consequuntur
+                debitis deleniti doloremque earum est explicabo molestias nostrum, quam ratione rem rerum sapiente,
+                veniam. Eligendi hic sed sint!</div>
+            </div>
+          </a>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="widgets widgets-text footer__top-item">
+          <h3 class="widgets__title">Заголовок виджета</h3>
+          <div class="widgets__content">
+            <div class="widgets__content-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. A earum facere minus officia porro. Atque
+              ducimus
+              excepturi illo ipsa, nam necessitatibus odit recusandae unde! Eligendi harum itaque minima quis. Labore.
+            </div>
           </div>
-        </a>
+        </div>
+        <div class="widgets widgets-text footer__top-item">
+          <h3 class="widgets__title">Заголовок виджета</h3>
+          <div class="widgets__content">
+            <div class="widgets__content-text">
+              Lorem esse eveniet fugit ipsum labore molestiae mollitia nesciunt, nulla quae similique, tempore tenetur
+              vel.
+            </div>
+          </div>
+        </div>
+        <div class="widgets widgets-text footer__top-item">
+          <h3 class="widgets__title">Заголовок виджета</h3>
+          <div class="widgets__content">
+            <div class="widgets__content-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, modi officiis. Adipisci consectetur
+              deleniti dolorem dolorum ducimus esse laborum nam natus nobis officiis perferendis, qui rem sapiente,
+              sed
+              totam voluptatibus.
+            </div>
+          </div>
+        </div>
+        <div class="widgets widgets-text footer__top-item">
+          <h3 class="widgets__title">Заголовок виджета</h3>
+          <div class="widgets__content">
+            <div class="widgets__content-text">
+              Accusantium, ad, beatae dignissimos dolorem doloremque ducimus est illo libero magnam numquam obcaecati
+              officia officiis omnis perspiciatis, provident repellat sapiente suscipit tenetur!
+            </div>
+          </div>
+        </div>
       </div>
-    </aside>
+      <div class="footer__bottom">
+        <div class="widgets widgets-text">
+          <h3 class="widgets__title widgets__title--line-sm">Заголовок виджета</h3>
+          <div class="widgets__content">
+            <div class="widgets__content-text">
+              Обычный текст виджета...
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 
-  <footer class="footer">
-    <div class="footer__top">
-      <div class="widgets widgets-text footer__top-item">
-        <h3 class="widgets__title">Заголовок виджета</h3>
-        <div class="widgets__content">
-          <div class="widgets__content-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A earum facere minus officia porro. Atque ducimus
-            excepturi illo ipsa, nam necessitatibus odit recusandae unde! Eligendi harum itaque minima quis. Labore.
-          </div>
-        </div>
-      </div>
-      <div class="widgets widgets-text footer__top-item">
-        <h3 class="widgets__title">Заголовок виджета</h3>
-        <div class="widgets__content">
-          <div class="widgets__content-text">
-            Lorem esse eveniet fugit ipsum labore molestiae mollitia nesciunt, nulla quae similique, tempore tenetur
-            vel.
-          </div>
-        </div>
-      </div>
-      <div class="widgets widgets-text footer__top-item">
-        <h3 class="widgets__title">Заголовок виджета</h3>
-        <div class="widgets__content">
-          <div class="widgets__content-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, modi officiis. Adipisci consectetur
-            deleniti dolorem dolorum ducimus esse laborum nam natus nobis officiis perferendis, qui rem sapiente, sed
-            totam voluptatibus.
-          </div>
-        </div>
-      </div>
-      <div class="widgets widgets-text footer__top-item">
-        <h3 class="widgets__title">Заголовок виджета</h3>
-        <div class="widgets__content">
-          <div class="widgets__content-text">
-            Accusantium, ad, beatae dignissimos dolorem doloremque ducimus est illo libero magnam numquam obcaecati
-            officia officiis omnis perspiciatis, provident repellat sapiente suscipit tenetur!
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <div class="widgets widgets-text">
-        <h3 class="widgets__title widgets__title--line-sm">Заголовок виджета</h3>
-        <div class="widgets__content">
-          <div class="widgets__content-text">
-            Обычный текст виджета...
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <script src="libs/jquery/dist/jquery.min.js"></script>
   <script src="libs/jquery.nicescroll/jquery.nicescroll.js"></script>
