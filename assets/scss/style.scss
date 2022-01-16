@@ -1,21 +1,22 @@
-@use '../../libs/normalize-scss/fork-versions/default/normalize';
-@use 'presets' as *;
-@use 'common';
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@300;400;700&display=swap");
+@use "../../libs/normalize-scss/fork-versions/default/normalize";
+@use "presets" as *;
+@use "common";
 
-@use 'header/header';
-@use 'header/header-logo';
-@use 'header/header-menu';
+@use "header/header";
+@use "header/header-logo";
+@use "header/header-menu";
 
-@use 'main/main';
-@use 'main/main-breadcrumb';
-@use 'main/main-content';
-@use 'main/main-content-item';
+@use "main/main";
+@use "main/main-breadcrumb";
+@use "main/main-content";
+@use "main/main-content-item";
 
-@use 'aside/left';
-@use 'aside/right';
+@use "aside/left";
+@use "aside/right";
 
-@use 'widgets/widgets';
-@use 'widgets/search';
-@use 'widgets/categories';
-@use 'widgets/news';
-@use 'footer';
+@use "widgets/widgets";
+@use "widgets/search";
+@use "widgets/categories";
+@use "widgets/news";
+@use "footer";
