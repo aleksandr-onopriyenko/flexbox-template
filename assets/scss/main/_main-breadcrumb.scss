@@ -1,61 +1,55 @@
-@use 'presets' as *;
+@use "presets" as *;
 
-.main-breadcrumb
-{
-    display: flex;
+.main-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 
-    width: 100%;
-    min-height: 37px;
-    margin-bottom: $gap;
-    padding: 8px 9px;
+  width: 100%;
+  min-height: 37px;
+  margin-bottom: $gap;
+  padding: 8px 9px;
 
-    border-radius: 7px;
-    background: linear-gradient(
-    90deg,
-    rgba($color-dark, 0) 0%,
-    rgba($color-dark, .8) 100%
-    );
+  border-radius: 7px;
+  background: linear-gradient(
+  90deg,
+  rgba($color-dark, 0) 0%,
+  rgba($color-dark, 0.8) 100%
+  );
+  &__item {
+    position: relative;
 
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
-    &__item
-    {
-        font-weight: 700;
+    padding: 0 10px;
 
-        position: relative;
+    letter-spacing: 0.145em;
 
-        padding: 0 10px;
+    font-weight: 700;
 
-        letter-spacing: .145em;
+    &:not(:last-child):hover {
+      color: $color-accent;
 
-        &:not(:last-child):hover
-        {
-            color: $color-accent;
-
-            @include text-shadow;
-        }
-
-        &:not(:last-child)::before
-        {
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 700;
-
-            position: absolute;
-            top: 49%;
-            right: -4.5px;
-
-            display: block;
-
-            content: '\f0da';
-            transform: translateY(-49%);
-
-            color: $color-gray;
-        }
-
-        &--current
-        {
-            font-weight: 300;
-        }
+      @include text-shadow;
     }
+
+    &:not(:last-child)::before {
+      position: absolute;
+      top: 49%;
+      right: -4.5px;
+
+      display: block;
+
+      content: "\f0da";
+      transform: translateY(-49%);
+
+      color: $color-gray;
+
+      font-family: "Font Awesome 5 Free";
+      font-weight: 700;
+    }
+
+    &--current {
+      font-weight: 300;
+    }
+  }
 }

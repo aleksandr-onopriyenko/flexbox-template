@@ -4,35 +4,35 @@
   position: relative;
 
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 100%;
   min-height: 51px;
 
   background-color: rgba($color-dark, 0.3);
 
-  justify-content: center;
-  align-items: center;
   @include sm {
     min-height: 50px;
   }
 
   &__list {
     display: flex;
-
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
     gap: 10px;
     @include sm {
       display: none;
       &--active {
         display: flex;
         flex-direction: column;
+        justify-content: center;
 
         width: 100%;
         height: auto;
         padding: 50px 5px 0;
 
-        justify-content: center;
         gap: 0;
       }
     }
@@ -60,13 +60,13 @@
     &.active {
       color: $color-accent-dark;
       background-color: rgba($color-dark, 0.4);
-      text-shadow: 1px 1px 3px #000, 1px 1px 10px #000;
+      text-shadow: 1px 1px 3px #000000, 1px 1px 10px #000000;
     }
 
     &:hover {
       color: $color-accent;
       background-color: rgba($color-dark, 0.3);
-      text-shadow: 1px 1px 3px #000, 1px 1px 10px #000;
+      text-shadow: 1px 1px 3px #000000, 1px 1px 10px #000000;
     }
   }
 }

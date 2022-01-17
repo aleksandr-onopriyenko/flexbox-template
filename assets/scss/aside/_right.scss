@@ -1,22 +1,18 @@
-@use 'presets' as *;
+@use "presets" as *;
 
-.sidebar-right
-{
-    order: 3;
-    @include lg-min
-    {
-        width: 240px;
-    }
-    @include lg-md
-    {
-        width: 100%;
-    }
-    @include md-xs
-    {
-        width: calc(50% - 7.5px);
-    }
-    @include xs
-    {
-        width: 100%;
-    }
+.sidebar-right {
+  order: 3;
+
+  @include lg-min {
+    width: 240px;
+  }
+  @include lg-md {
+    width: 100%;
+  }
+  @include md-xs {
+    width: calc(50% - 7.5px);
+  }
+  @include xs {
+    width: 100%;
+  }
 }

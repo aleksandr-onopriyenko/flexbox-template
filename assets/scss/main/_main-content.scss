@@ -1,13 +1,11 @@
-@use 'presets' as *;
+@use "presets" as *;
 
-.main-content
-{
-    display: flex;
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
 
-    flex-wrap: wrap;
-    gap: $gap-s;
-    @include sm-xx
-    {
-        width: calc(100% + 15px);
-    }
+  gap: $gap-s;
+  @include sm-xx {
+    width: calc(100% + 15px);
+  }
 }

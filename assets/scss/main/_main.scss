@@ -1,55 +1,49 @@
-@use 'presets' as *;
+@use "presets" as *;
 
-.main
-{
-    margin-bottom: $gap-s;
+.main {
+  flex-grow: 2;
+  order: 2;
 
-    flex-grow: 2;
-    order: 2;
-    @include lg-min
-    {
-        max-width: calc(100% - 520px);
+  margin-bottom: $gap-s;
+
+  @include lg-min {
+    max-width: calc(100% - 520px);
+  }
+  @include lg-md {
+    max-width: calc(100% - 250px);
+  }
+  @include md {
+    order: 1;
+  }
+
+  &__title {
+    margin-bottom: $gap;
+    padding: 8px 12px;
+
+    letter-spacing: 0.107em;
+
+    border-radius: 7px;
+    background: linear-gradient(
+    -90deg,
+    rgba($color-dark, 0) 0%,
+    rgba($color-dark, 0.5) 10%,
+    rgba($color-dark, 0.8) 100%
+    );
+
+    font-family: $font-header;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.5em;
+
+    @include sm-xs {
+      letter-spacing: 3px;
+
+      font-size: 21px;
     }
-    @include lg-md
-    {
-        max-width: calc(100% - 250px);
+    @include xs {
+      letter-spacing: 3px;
+
+      font-size: 1rem;
     }
-    @include md
-    {
-        order: 1;
-    }
-
-    &__title
-    {
-        font-family: $font-header;
-        font-size: 2rem;
-        font-weight: 400;
-        line-height: 1.5em;
-
-        margin-bottom: $gap;
-        padding: 8px 12px;
-
-        letter-spacing: .107em;
-
-        border-radius: 7px;
-        background: linear-gradient(
-        -90deg,
-        rgba($color-dark, 0) 0%,
-        rgba($color-dark, .5) 10%,
-        rgba($color-dark, .8) 100%
-        );
-
-        @include sm-xs
-        {
-            font-size: 21px;
-
-            letter-spacing: 3px;
-        }
-        @include xs
-        {
-            font-size: 1rem;
-
-            letter-spacing: 3px;
-        }
-    }
+  }
 }

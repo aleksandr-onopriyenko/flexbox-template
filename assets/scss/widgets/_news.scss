@@ -1,102 +1,90 @@
-@use 'presets' as *;
+@use "presets" as *;
 
-.widgets-news
-{
-    padding-bottom: 22px;
-    &__item
-    {
-        display: block;
+.widgets-news {
+  padding-bottom: 22px;
+  &__item {
+    display: block;
 
-        transition: background .5s;
-        &:not(:last-child)
-        {
-            margin-bottom: 12px;
-        }
-        &:hover
-        {
-            background: radial-gradient(
-            circle,
-            rgba(#000, .6) 0%,
-            rgba(#000, .3) 50%,
-            rgba(#000, .01) 100%
-            );
-        }
-        &:hover .widgets-news__item-title
-        {
-            color: $color-accent;
-
-            @include text-shadow;
-        }
-        &:hover .widgets-news__item-text
-        {
-            color: $color-light;
-        }
-        &:hover .widgets-news__item-poster img
-        {
-            transform: scale(1.2);
-        }
+    transition: background 0.5s;
+    &:not(:last-child) {
+      margin-bottom: 12px;
     }
-
-    &__item-title
-    {
-        font-weight: 300;
-
-        overflow: hidden;
-
-        max-width: 100%;
-        margin: 0 0 10px;
-
-        transition: color .5s;
-        white-space: nowrap;
-        letter-spacing: 1px;
-        text-overflow: ellipsis;
+    &:hover {
+      background: radial-gradient(
+      circle,
+      rgba(#000000, 0.6) 0%,
+      rgba(#000000, 0.3) 50%,
+      rgba(#000000, 0.01) 100%
+      );
     }
+    &:hover .widgets-news__item-title {
+      color: $color-accent;
 
-    &__description
-    {
-        display: flex;
-
-        margin-bottom: 5px;
+      @include text-shadow;
     }
-
-    &__item-poster
-    {
-        overflow: hidden;
-
-        width: 75px;
-        height: 75px;
-
-        border-radius: 4px;
-
-        img
-        {
-            width: 100%;
-            height: 100%;
-
-            transition: transform .5s;
-
-            object-fit: cover;
-        }
+    &:hover .widgets-news__item-text {
+      color: $color-light;
     }
-
-    &__item-text
-    {
-        font-size: 13px;
-        line-height: 19px;
-
-        display: -webkit-box;
-        overflow: hidden;
-
-        width: calc(100% - 75px);
-        height: 78px;
-        padding: 0 0 0 10px;
-
-        transition: color .5s;
-        text-overflow: ellipsis;
-
-        color: $color-gray;
-
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 4;
+    &:hover .widgets-news__item-poster img {
+      transform: scale(1.2);
     }
+  }
+
+  &__item-title {
+    overflow: hidden;
+
+    max-width: 100%;
+    margin: 0 0 10px;
+
+    transition: color 0.5s;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    text-overflow: ellipsis;
+
+    font-weight: 300;
+  }
+
+  &__description {
+    display: flex;
+
+    margin-bottom: 5px;
+  }
+
+  &__item-poster {
+    overflow: hidden;
+
+    width: 75px;
+    height: 75px;
+
+    border-radius: 4px;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      transition: transform 0.5s;
+
+      object-fit: cover;
+    }
+  }
+
+  &__item-text {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+
+    width: calc(100% - 75px);
+    height: 78px;
+    padding: 0 0 0 10px;
+
+    transition: color 0.5s;
+    text-overflow: ellipsis;
+
+    color: $color-gray;
+
+    font-size: 13px;
+    line-height: 19px;
+
+    -webkit-line-clamp: 4;
+  }
 }

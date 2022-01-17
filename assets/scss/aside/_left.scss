@@ -1,25 +1,21 @@
-@use 'presets' as *;
+@use "presets" as *;
 
-.sidebar-left
-{
-    display: flex;
-    flex-direction: column;
+.sidebar-left {
+  display: flex;
+  flex-direction: column;
+  order: 2;
 
-    gap: $gap-s;
-    order: 2;
-    @include md-min
-    {
-        max-width: 220px;
+  gap: $gap-s;
+  @include md-min {
+    flex-grow: 1;
+    order: 1;
 
-        order: 1;
-        flex-grow: 1;
-    }
-    @include md-xs
-    {
-        width: calc(50% - 7.5px);
-    }
-    @include xs
-    {
-        width: 100%;
-    }
+    max-width: 220px;
+  }
+  @include md-xs {
+    width: calc(50% - 7.5px);
+  }
+  @include xs {
+    width: 100%;
+  }
 }
